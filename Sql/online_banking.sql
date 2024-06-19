@@ -27,5 +27,3 @@ CREATE TABLE Transactions (
     amount DECIMAL(15, 2) NOT NULL,
     FOREIGN KEY (account_number) REFERENCES Accounts(account_number)
 );
-
-d
