@@ -1,2 +1,4 @@
 # add .env file to be ignored
 echo ".env" >> .gitignore
+
+
