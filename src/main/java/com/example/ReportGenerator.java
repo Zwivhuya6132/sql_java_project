@@ -13,15 +13,21 @@ public class ReportGenerator {
 
         
         // Database connection details
-        String url = System.getenv("mysql://onlineBanking_leatherhit:8e430c77ace31ccebb18fc21288f8f0c12bb1ba1@rfd.h.filess.io:3307/onlineBanking_leatherhit");
-        String username = System.getenv("DB_USER");
-        String password = System.getenv("DB_PASSWORD");
+        String hostname = "rfd.h.filess.io";
+        String database = "onlineBanking_leatherhit";
+        String port = "3307";
+        String username = "onlineBanking_leatherhit";
+        String password = "8e430c77ace31ccebb18fc21288f8f0c12bb1ba1";
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter customer ID: ");
         int customerId = scanner.nextInt();
 
-        try (Connection connection = DriverManager.getConnection(url, username, password)) {
+        try  {
+
+            
+            
+            Connection connection = DriverManager.getConnection(hostname, database, port, username, password);
             // Check if the customer ID is valid
             if (isCustomerIdValid(connection, customerId)) {
                 // Generate reports

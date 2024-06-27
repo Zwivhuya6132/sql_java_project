@@ -2,4 +2,4 @@
 
 SELECT first_name, last_name, street, house_number, zip_code, city, country
 FROM Customers
-WHERE customer_id = ?
+WHERE customer_id = ?;
