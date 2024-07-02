@@ -15,11 +15,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.26</version>
-        </dependency>
 
         <dependency>
             <groupId>io.github.cdimascio</groupId>
@@ -30,9 +25,15 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.32</version>
+            <version>8.0.32</version> <!-- Use the latest stable version -->
         </dependency>
 
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
 
@@ -43,7 +44,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>com.example.ReportGenerator</mainClass>
+                    <mainClass>online_banking_system.reports.ReportGenerator</mainClass>
                 </configuration>
             </plugin>
         </plugins>
